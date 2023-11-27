@@ -35,7 +35,7 @@ async def check(ctx, crypto):
         title= urlresults["name"],
         description="Here is current info on " + urlresults["name"] ,
         color=discord.Color.orange())
-        embed.set_author(name="Coin Gecko", url="coingecko.com")
+        embed.set_author(name="Coin Gecko", url="https://coingecko.com")
         embed.add_field(name="Current price", value="$"+str(urlresults["current_price"]), inline=False)
         embed.add_field(name="Price Change over the last 24 hours", value=urlresults["price_change_24h"], inline=False)
         embed.add_field(name="Lowest price over the last 24 hours", value=urlresults["low_24h"], inline=False)
