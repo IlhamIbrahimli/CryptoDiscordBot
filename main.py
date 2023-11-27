@@ -16,7 +16,7 @@ async def start(ctx):
     await ctx.send("Hi. This bot will help you keep track of major crypto currencies and you can play a game of should i take out my stocks? Type crypto!help for more commands")
 @bot.command(name = "check")
 async def check(ctx, crypto):
-    url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids="+crypto
+    url = "api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids="+crypto
     print(type(urllib.request.urlopen(url).read()))
     urlresults = str(urllib.request.urlopen(url).read())
     n=2
