@@ -240,7 +240,7 @@ async def help(ctx):
     embed.add_field(name="Check stats on cryptocurrencies.", value="crypto!check (currency)", inline=False)
     embed.add_field(name="Start the game", value="crypto!startgame", inline=False)
     embed.add_field(name="Invest in the game", value="crypto!invest (bitcoin,ethereum,binancecoin,tether,solana) (amount)", inline=False)
-    embed.add_field(name="Buy out your cryptocurrencies", value="crypto!buy (bitcoin,ethereum,binancecoin,tether,solana) (amount)", inline=False)
+    embed.add_field(name="Buy out your cryptocurrencies", value="crypto!withdraw (bitcoin,ethereum,binancecoin,tether,solana) (amount)", inline=False)
     embed.add_field(name="Check your game stats", value="crypto!checkmy", inline=False)
     channel = bot.get_channel(926828331184316436)
     await ctx.send(embed = embed)
