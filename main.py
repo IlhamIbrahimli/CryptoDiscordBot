@@ -144,7 +144,7 @@ async def checkmy(ctx):
     embed.add_field(name="Tether", value=people[ctx.author.name][4], inline=False)
     embed.add_field(name="Solana", value=people[ctx.author.name][4], inline=False)  
     await ctx.send(embed=embed)
-@bot.command(name = "buy")
+@bot.command(name = "withdraw")
 async def buy(ctx, *args):
      if ctx.author.name in people.keys():
         cur = args[0]
@@ -161,7 +161,7 @@ async def buy(ctx, *args):
                 urlresults = json.loads(urlresults)
                 people[ctx.author.name][0] += urlresults["current_price"]*float(args[1])
                 people[ctx.author.name][1] -= float(args[1])
-                msg = "You just bought "+ args[1]+cur
+                msg = "You just withdrew "+ args[1]+cur
                 await ctx.send(msg)
             else:
                 await ctx.send("Not enough currency. Try selling some of your currency")
@@ -177,7 +177,7 @@ async def buy(ctx, *args):
                 urlresults = json.loads(urlresults)
                 people[ctx.author.name][0] += urlresults["current_price"]*float(args[1])
                 people[ctx.author.name][2] -= float(args[1])
-                msg = "You just invested $"+ args[1]+" in "+cur
+                msg = "You just withdrew "+ args[1]+cur
                 await ctx.send(msg)
             else:
                 await ctx.send("Not enough currency. Try selling some of your currency")
@@ -193,7 +193,7 @@ async def buy(ctx, *args):
                 urlresults = json.loads(urlresults)
                 people[ctx.author.name][0] += urlresults["current_price"]*float(args[1])
                 people[ctx.author.name][3] -= float(args[1])
-                msg = "You just invested $"+ args[1]+" in "+cur
+                msg =  "You just withdrew "+ args[1]+cur
                 await ctx.send(msg)
             else:
                 await ctx.send("Not enough currency. Try selling some of your currency")
@@ -209,7 +209,7 @@ async def buy(ctx, *args):
                 urlresults = json.loads(urlresults)
                 people[ctx.author.name][0] += urlresults["current_price"]*float(args[1])
                 people[ctx.author.name][4] -= float(args[1])
-                msg = "You just invested $"+ args[1]+" in "+cur
+                msg =  "You just withdrew "+ args[1]+cur
                 await ctx.send(msg)
             else:
                 await ctx.send("Not enough currency. Try selling some of your currency")
@@ -225,7 +225,7 @@ async def buy(ctx, *args):
                 urlresults = json.loads(urlresults)
                 people[ctx.author.name][0] += urlresults["current_price"]*float(args[1])
                 people[ctx.author.name][5] -= float(args[1])
-                msg = "You just invested $"+ args[1]+" in "+cur
+                msg =  "You just withdrew "+ args[1]+cur
                 await ctx.send(msg)
             else:
                 await ctx.send("Not enough currency. Try selling some of your currency")
